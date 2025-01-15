@@ -37,12 +37,12 @@ const AuthProvider = ({ children }) => {
             if (currentUser) {
 
 
-                axios.post('http://localhost:5000/jwt', loggedUser, { withCredentials: true }).then(res => {
+                axios.post('https://car-doctor-server-v2-usingjwt.onrender.com/jwt', loggedUser, { withCredentials: true }).then(res => {
                     console.log('Token response: ', res.data)
                 }
                 )
             } else {
-                axios.post('http://localhost:5000/logout', loggedUser, { withCredentials: true }).then(res => {
+                axios.post('https://car-doctor-server-v2-usingjwt.onrender.com/logout', loggedUser, { withCredentials: true }).then(res => {
                     console.log(res.data);
                 }
                 )
